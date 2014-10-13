@@ -30,7 +30,7 @@
             var myOptions = {zoom:17,center:new google.maps.LatLng(52.21634608151536, 6.895216116532879),mapTypeId: google.maps.MapTypeId.HYBRID};
             map = new google.maps.Map(document.getElementById("gmap_canvas"), myOptions);
             marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(52.21634608151536, 6.895216116532879)});
-            infowindow = new google.maps.InfoWindow({content:"<b>Bixie's Paaltje</b><br/>Burgemeester Edo Bergsmalaan 1<br/>7512 AD Enschede" });
+            infowindow = new google.maps.InfoWindow({content:"<b>Bixie's Paaltje</b><br/>Wigboldpaal 5<br/>7512 AD Enschede" });
             google.maps.event.addListener(marker, "click", function(){infowindow.open(map,marker);});
             infowindow.open(map,marker);
         }
