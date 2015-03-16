@@ -8,12 +8,13 @@
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
     <script src="vendor/jquery/jquery-2.1.1.min.js"></script>
     <script src="vendor/uikit/js/uikit.min.js"></script>
-    <script src="js/bixslideshow.js"></script>
+    <script src="vendor/uikit/js/components/slideshow.js"></script>
+    <script src="vendor/uikit/js/components/lightbox.js"></script>
     <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
     <link rel="stylesheet" href="vendor/uikit/css/uikit.almost-flat.min.css">
-    <link rel="stylesheet" href="vendor/uikit/css/flex.almost-flat.min.css">
-    <link rel="stylesheet" href="vendor/uikit/css/cover.almost-flat.min.css">
-    <link rel="stylesheet" href="vendor/uikit/css/dotnav.almost-flat.min.css">
+    <link rel="stylesheet" href="vendor/uikit/css/components/slideshow.almost-flat.min.css">
+    <link rel="stylesheet" href="vendor/uikit/css/components/slidenav.almost-flat.min.css">
+    <link rel="stylesheet" href="vendor/uikit/css/components/dotnav.almost-flat.min.css">
     <style>#gmap_canvas img{max-width:none!important;background:none!important}</style>
 </head>
 <body>
@@ -28,17 +29,36 @@
         </div>
     </div>
 </div>
+<ul class="uk-thumbnav uk-grid-width-1-3 uk-grid-width-medium-1-5">
+    <li class="uk-panel uk-panel-box uk-flex uk-flex-middle uk-flex-center"><a href="images/justinpaal.jpg" data-uk-lightbox="{group: 'paal'}"><img src="images/justinpaal.jpg" alt="justinpaal"/></a></li>
+    <li class="uk-panel uk-panel-box uk-flex uk-flex-middle uk-flex-center"><a href="images/djojsje-pressjuh.jpg" data-uk-lightbox="{group: 'paal'}"><img src="images/djojsje-pressjuh.jpg" alt="djojsje-pressjuh"/></a></li>
+    <li class="uk-panel uk-panel-box uk-flex uk-flex-middle uk-flex-center"><a href="images/pisapaaltje.jpg" data-uk-lightbox="{group: 'paal'}"><img src="images/pisapaaltje.jpg" alt="pisa"/></a></li>
+    <li class="uk-panel uk-panel-box uk-flex uk-flex-middle uk-flex-center"><a href="images/eiffelpaal.jpg" data-uk-lightbox="{group: 'paal'}"><img src="images/eiffelpaal.jpg" alt="parijs"/></a></li>
+    <li class="uk-panel uk-panel-box uk-flex uk-flex-middle uk-flex-center"><a href="images/wbp5v2.png" data-uk-lightbox="{group: 'paal'}"><img src="images/wbp5v2.png" alt="dus"/></a></li>
+    <li class="uk-panel uk-panel-box uk-flex uk-flex-middle uk-flex-center"><a href="images/paaltje.jpg" data-uk-lightbox="{group: 'paal'}"><img src="images/paaltje.jpg" alt="pisa"/></a></li>
+</ul>
 
-<div class="uk-width-1-1 uk-text-center uk-panel" id="bix-slideshow" data-bix-slideshow="{nav:true}">
-    <div><img src="images/justinpaal.jpg" alt="justinpaal"/></div>
-    <div><img src="images/djojsje-pressjuh.jpg" alt="djojsje-pressjuh"/></div>
-    <div><img src="images/pisapaaltje.jpg" alt="pisa"/></div>
-    <div><img src="images/eiffelpaal.jpg" alt="parijs"/></div>
-    <div><img src="images/wbp5v2.png" alt="dus"/></div>
-    <div><img src="images/paaltje.jpg" alt="pisa"/></div>
+<div class="uk-slidenav-position uk-cover" style="height:800px" data-uk-slideshow="{autoplay:true}">
+    <ul class="uk-slideshow">
+        <li><img src="images/justinpaal.jpg" alt="justinpaal"/></li>
+        <li><img src="images/djojsje-pressjuh.jpg" alt="djojsje-pressjuh"/></li>
+        <li><img src="images/pisapaaltje.jpg" alt="pisa"/></li>
+        <li><img src="images/eiffelpaal.jpg" alt="parijs"/></li>
+        <li><img src="images/wbp5v2.png" alt="dus"/></li>
+        <li><img src="images/paaltje.jpg" alt="pisa"/></li>
+    </ul>
+    <a href="" data-uk-slideshow-item="previous"></a>
+    <a href="" data-uk-slideshow-item="next"></a>
+    <ul class="uk-dotnav uk-dotnav-contrast uk-position-bottom uk-flex-center">
+        <li data-uk-slideshow-item="0"><a href=""></a></li>
+        <li data-uk-slideshow-item="1"><a href=""></a></li>
+        <li data-uk-slideshow-item="2"><a href=""></a></li>
+        <li data-uk-slideshow-item="3"><a href=""></a></li>
+        <li data-uk-slideshow-item="4"><a href=""></a></li>
+        <li data-uk-slideshow-item="5"><a href=""></a></li>
+    </ul>
 </div>
-
-<div style="overflow:hidden;height:300px;width:100%;">
+<div class="uk-cover" style="height:300px;">
     <div id="gmap_canvas" style="height:300px;width:100%;"></div>
     <a class="google-map-code" href="http://www.trivoo.net" id="get-map-data">trivoo.net</a>
 </div>
